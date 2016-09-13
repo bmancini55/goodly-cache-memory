@@ -2,16 +2,16 @@
 import Debug from 'debug';
 const debug = Debug('goodly:memory-cache');
 
-export default async () => {
+export default () => {
   let _cache = {};
 
   return {
-    readFromCache: async (key) => {
+    readFromCache: (key) => {
       debug('reading %s', key);
       return _cache[key];
     },
 
-    writeToCache: async (key, data) => {
+    writeToCache: (key, data) => {
       debug('writing %s', key);
       _cache[key] = data;
     }
