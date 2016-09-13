@@ -5,7 +5,8 @@
   "main": "dist/memory-cache.js",
   "scripts": {
     "build": "babel src --source-maps --out-dir dist ",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "postinstall": "npm run build"
   },
   "author": "Brian <bmancini@gmail.com>",
   "license": "MIT",
